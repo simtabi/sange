@@ -1,0 +1,31 @@
+# ===================================================================
+# 🧩 Package Makefile — {{PACKAGE_NAME}}
+# ===================================================================
+#
+# Scoped Makefile for the `{{PACKAGE_NAME}}` package in the MukoraCMS
+# monorepo. It integrates with the centralized Sange automation
+# stack for Git, Docker, NPM/Yarn, Laravel, and more.
+#
+# Project-specific configuration is declared below.
+# Core stack functionality is inherited via `sange.mk`.
+#
+# 📚 For usage and available commands, refer to:
+#   → 📖 /sange/docs/README.md
+#   → 🧩 /sange/src/*.mk
+#   → 🔧 /sange/src/scripts/**/*.sh
+#
+# ===================================================================
+
+# -------------------------------------------------------------------
+# 🧷 Package Configuration
+# -------------------------------------------------------------------
+
+PACKAGE_NAME := {{PACKAGE_NAME}}
+GIT_REPO := $(CURDIR)
+GIT_BRANCH := main
+DEFAULT_COMMIT_MESSAGE := 📦️ chore($(PACKAGE_NAME)): routine update
+
+# -------------------------------------------------------------------
+# 🧩 Include Sange Stack
+# -------------------------------------------------------------------
+include path/to/sange/src/sange.mk
